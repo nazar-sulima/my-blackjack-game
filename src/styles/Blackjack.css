@@ -1,0 +1,95 @@
+:root {
+    --bg-green-dark: #003300;
+    --bg-green-light: #006400;
+    --btn-yellow: #ffd700;
+    --btn-yellow-hover: #ffb700;
+    --btn-disabled: #aaa;
+    --card-width: 60px;
+    --card-height: 90px;
+    --transition-speed: 0.3s;
+  }
+
+  .blackjack {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: radial-gradient(circle at center, var(--bg-green-light), var(--bg-green-dark));
+    color: #fff;
+    min-height: 100vh;
+    width: 100%;
+    padding: 2rem;
+    text-align: center;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+  
+  .hands {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 2rem;
+    margin: 2rem 0;
+  }
+  
+  .hand {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    padding: 1.25rem;
+    border: 2px solid #fff;
+    border-radius: 12px;
+    background-color: rgba(0, 0, 0, 0.4);
+    min-height: 100px;
+    transition: background-color var(--transition-speed);
+  }
+  
+  .card {
+    background: #fff;
+    color: #000;
+    width: var(--card-width);
+    height: var(--card-height);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    font-weight: bold;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.4);
+    transition: transform 0.2s ease;
+    user-select: none;
+  }
+  
+  .card:hover {
+    transform: scale(1.1);
+  }
+  
+  .controls {
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+  
+  button {
+    background-color: var(--btn-yellow);
+    color: #000;
+    font-weight: bold;
+    padding: 0.75rem 1.75rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color var(--transition-speed), transform 0.2s ease;
+  }
+  
+  button:hover:not(:disabled) {
+    background-color: var(--btn-yellow-hover);
+    transform: scale(1.05);
+  }
+  
+  button:disabled {
+    background-color: var(--btn-disabled);
+    cursor: not-allowed;
+  }
+  
